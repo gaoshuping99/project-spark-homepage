@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sap-blue: #0070b1;
+  --color-sap-deep: #001e4d;
+  --color-sap-cyan: #008fd3;
+  --color-sap-orange: #f0ab00;
+  --color-sap-grey: #f4f4f4;
+  
+  --font-sans: "Inter", "72", "72Full", Arial, Helvetica, sans-serif;
+  
+  --radius-sap: 0.5rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    @apply antialiased;
+  }
+  body {
+    @apply text-slate-800 bg-white;
+    font-family: var(--font-sans);
+  }
+}
+
+.sap-gradient {
+  background: linear-gradient(135deg, var(--color-sap-deep) 0%, var(--color-sap-blue) 100%);
+}
+
+.sap-card-hover {
+  @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border-gray-100 bg-white;
+}
+
+.sap-button-primary {
+  @apply px-6 py-3 bg-sap-blue text-white font-semibold rounded-sap transition-all hover:bg-sap-blue/90 active:scale-95 border-b-4 border-sap-deep/20 flex items-center justify-center;
+}
+
+.sap-button-secondary {
+  @apply px-6 py-3 border-2 border-sap-blue text-sap-blue font-semibold rounded-sap transition-all hover:bg-sap-blue/5 active:scale-95 flex items-center justify-center;
+}
+
+.section-padding {
+  @apply py-20 px-6 md:px-12 lg:px-24;
+}
