@@ -31,11 +31,6 @@ const App = () => {
       description: "Gain full autonomy to drive sales and delivery in high-growth segments without internal competition."
     },
     {
-      icon: <ShieldCheck className="w-10 h-10 text-[#0070b1] stroke-[1.5]" />,
-      title: "\"Safe Harbor\" Protection",
-      description: "Distinct territory definitions that prevent low-price internal competition and protect your margins."
-    },
-    {
       icon: <Users className="w-10 h-10 text-[#0070b1] stroke-[1.5]" />,
       title: "1-on-1 Industry Coaching",
       description: "Get direct support from SAP industry experts to refine your demos and sharpen your market strategy."
