@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 import { 
   ChevronRight, 
   Target, 
-  TrendingUp, 
   ShieldCheck, 
-  MousePointer2, 
   Users, 
   Calendar, 
   ArrowRight,
@@ -33,19 +31,9 @@ const App = () => {
       description: "Gain full autonomy to drive sales and delivery in high-growth segments without internal competition."
     },
     {
-      icon: <TrendingUp className="w-10 h-10 text-[#0070b1] stroke-[1.5]" />,
-      title: "Exceptional Returns",
-      description: "Access up to 10% exclusive cloud rebates and priority entry to Development Funds with ACV thresholds reduced from 200k to 100k EUR."
-    },
-    {
       icon: <ShieldCheck className="w-10 h-10 text-[#0070b1] stroke-[1.5]" />,
       title: "\"Safe Harbor\" Protection",
       description: "Distinct territory definitions that prevent low-price internal competition and protect your margins."
-    },
-    {
-      icon: <MousePointer2 className="w-10 h-10 text-[#0070b1] stroke-[1.5]" />,
-      title: "Priority Lead Routing",
-      description: "Automated routing that prioritizes Project Spark partners for high-intent mid-market leads."
     },
     {
       icon: <Users className="w-10 h-10 text-[#0070b1] stroke-[1.5]" />,
@@ -140,11 +128,7 @@ const App = () => {
       </section>
 
       <section className="bg-gray-50 border-y border-gray-100 py-12">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="flex items-center gap-4">
-            <div className="text-4xl font-bold text-sap-blue">10%</div>
-            <div className="text-sm text-gray-500 font-medium leading-tight">Exclusive Cloud <br />Rebates for Partners</div>
-          </div>
+        <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="flex items-center gap-4">
             <div className="text-4xl font-bold text-sap-blue">2X</div>
             <div className="text-sm text-gray-500 font-medium leading-tight">Faster Market <br />Expansion Potential</div>
