@@ -237,8 +237,8 @@ const App = () => {
       <section id="cases" className="section-padding">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-4xl font-bold text-sap-deep mb-4">Pioneering Success</h2>
-            <p className="text-lg text-gray-600">See how our industry partners are defining the future of ProServ and EC&O.</p>
+            <h2 className="text-4xl font-bold text-sap-deep mb-4">Pioneering Success <span className="text-lg font-normal text-gray-400">(Example Scenarios)</span></h2>
+            <p className="text-lg text-gray-600">Illustrative examples of how partners can drive impact in ProServ and EC&O industries.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -246,13 +246,13 @@ const App = () => {
               <div className="absolute inset-0 bg-sap-deep/70 group-hover:bg-sap-deep/50 transition-colors z-10" />
               <img 
                 src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1000" 
-                alt="Accenture Pilot" 
+                alt="Partner A Example" 
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute bottom-0 left-0 p-10 z-20">
-                <span className="px-3 py-1 bg-sap-cyan text-white text-xs font-bold rounded-full mb-4 inline-block tracking-widest uppercase">Pioneer Spotlight</span>
-                <h3 className="text-3xl font-bold text-white mb-4 leading-tight">Accenture: Redefining Partner-Managed Learning</h3>
-                <p className="text-white/80 mb-6 max-w-md">As our global pilot partner, Accenture is leading the new partner-managed SAP Learning Class model.</p>
+                <span className="px-3 py-1 bg-sap-cyan text-white text-xs font-bold rounded-full mb-4 inline-block tracking-widest uppercase">Example Scenario</span>
+                <h3 className="text-3xl font-bold text-white mb-4 leading-tight">Partner A: Redefining Partner-Managed Learning</h3>
+                <p className="text-white/80 mb-6 max-w-md">As a global pilot partner, Partner A leads the new partner-managed SAP Learning Class model.</p>
                 <button className="text-white font-bold flex items-center gap-2 group-hover:gap-4 transition-all border-b border-white/30 pb-1">
                   Read Success Story <ArrowRight className="w-4 h-4" />
                 </button>
@@ -263,13 +263,13 @@ const App = () => {
               <div className="absolute inset-0 bg-sap-blue/70 group-hover:bg-sap-blue/50 transition-colors z-10" />
               <img 
                 src="https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&q=80&w=1000" 
-                alt="EC&O Excellence" 
+                alt="Partner B Example" 
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute bottom-0 left-0 p-10 z-20">
-                <span className="px-3 py-1 bg-sap-deep text-white text-xs font-bold rounded-full mb-4 inline-block tracking-widest uppercase">Industry Depth</span>
-                <h3 className="text-3xl font-bold text-white mb-4 leading-tight">Digitalizing the Construction Value Chain</h3>
-                <p className="text-white/80 mb-6 max-w-md">Winning against niche competitors like CMiC through end-to-end integration excellence.</p>
+                <span className="px-3 py-1 bg-sap-deep text-white text-xs font-bold rounded-full mb-4 inline-block tracking-widest uppercase">Example Scenario</span>
+                <h3 className="text-3xl font-bold text-white mb-4 leading-tight">Partner B: Digitalizing the Construction Value Chain</h3>
+                <p className="text-white/80 mb-6 max-w-md">Winning against niche competitors through end-to-end integration excellence.</p>
                 <button className="text-white font-bold flex items-center gap-2 group-hover:gap-4 transition-all border-b border-white/30 pb-1">
                   Read Case Study <ArrowRight className="w-4 h-4" />
                 </button>
@@ -292,20 +292,13 @@ const App = () => {
                 <div className="p-3 bg-sap-orange rounded-lg"><Mail className="w-5 h-5" /></div>
                 <div>
                   <div className="text-xs uppercase tracking-widest opacity-50">Email Us</div>
-                  <div className="font-bold">spark.initiative@sap.com</div>
-                </div>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="p-3 bg-white/10 rounded-lg"><Globe className="w-5 h-5" /></div>
-                <div>
-                  <div className="text-xs uppercase tracking-widest opacity-50">Region</div>
-                  <div className="font-bold">Global Strategic Pilot</div>
+                  <div className="font-bold">susana.gonzalez.navarrete@sap.com</div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="md:w-1/2 bg-white rounded-3xl p-8 md:p-10 shadow-2xl">
+          <div className="md:w-1/2 bg-white rounded-3xl p-8 md:p-10 shadow-2xl max-h-[600px] overflow-y-auto">
             {formSubmitted ? (
               <div className="h-full flex flex-col items-center justify-center text-center py-10">
                 <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-6">
@@ -315,57 +308,139 @@ const App = () => {
                 <p className="text-gray-600">Thank you for your interest in Project Spark. One of our experts will contact you shortly.</p>
               </div>
             ) : (
-              <form onSubmit={(e) => { e.preventDefault(); setFormSubmitted(true); }} className="space-y-5">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <div className="space-y-2">
-                    <label className="text-xs font-bold text-gray-500 uppercase tracking-wider">First Name</label>
-                    <input type="text" required className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-sap-blue/20 transition-all" />
+              <form onSubmit={(e) => { e.preventDefault(); setFormSubmitted(true); }} className="space-y-4">
+                {/* Commitment Checkbox */}
+                <div className="space-y-2 p-4 bg-sap-blue/5 rounded-xl border border-sap-blue/20">
+                  <label className="flex items-start gap-3 cursor-pointer">
+                    <input type="checkbox" required className="mt-1 w-4 h-4 text-sap-blue rounded border-gray-300 focus:ring-sap-blue" />
+                    <span className="text-sm text-gray-700 leading-relaxed">
+                      I confirm my participation in <strong>Project Spark</strong> and commit to attending project-organized activities and submitting required project information.
+                    </span>
+                  </label>
+                </div>
+
+                {/* Company Information */}
+                <div className="pt-2">
+                  <h4 className="text-sm font-bold text-sap-deep uppercase tracking-wider mb-3">Company Information</h4>
+                  <div className="space-y-3">
+                    <div className="space-y-2">
+                      <label className="text-xs font-bold text-gray-500 uppercase tracking-wider">Company Name *</label>
+                      <input type="text" required className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-sap-blue/20 transition-all" />
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      <div className="space-y-2">
+                        <label className="text-xs font-bold text-gray-500 uppercase tracking-wider">Region *</label>
+                        <select required className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-sap-blue/20 transition-all appearance-none">
+                          <option value="">Select Region</option>
+                          <option>EMEA</option>
+                          <option>APJ</option>
+                          <option>Americas</option>
+                          <option>Greater China</option>
+                        </select>
+                      </div>
+                      <div className="space-y-2">
+                        <label className="text-xs font-bold text-gray-500 uppercase tracking-wider">Country *</label>
+                        <input type="text" required className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-sap-blue/20 transition-all" />
+                      </div>
+                    </div>
                   </div>
-                  <div className="space-y-2">
-                    <label className="text-xs font-bold text-gray-500 uppercase tracking-wider">Last Name</label>
-                    <input type="text" required className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-sap-blue/20 transition-all" />
+                </div>
+
+                {/* Project Leads */}
+                <div className="pt-2">
+                  <h4 className="text-sm font-bold text-sap-deep uppercase tracking-wider mb-3">Project Contacts</h4>
+                  <div className="space-y-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      <div className="space-y-2">
+                        <label className="text-xs font-bold text-gray-500 uppercase tracking-wider">Project Lead Name *</label>
+                        <input type="text" required className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-sap-blue/20 transition-all" />
+                      </div>
+                      <div className="space-y-2">
+                        <label className="text-xs font-bold text-gray-500 uppercase tracking-wider">Project Lead Email *</label>
+                        <input type="email" required className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-sap-blue/20 transition-all" />
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      <div className="space-y-2">
+                        <label className="text-xs font-bold text-gray-500 uppercase tracking-wider">Contact Person Name</label>
+                        <input type="text" className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-sap-blue/20 transition-all" />
+                      </div>
+                      <div className="space-y-2">
+                        <label className="text-xs font-bold text-gray-500 uppercase tracking-wider">Contact Person Email</label>
+                        <input type="email" className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-sap-blue/20 transition-all" />
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div className="space-y-2">
-                  <label className="text-xs font-bold text-gray-500 uppercase tracking-wider">Company Email</label>
-                  <input type="email" required className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-sap-blue/20 transition-all" />
+
+                {/* Industry Focus */}
+                <div className="pt-2">
+                  <h4 className="text-sm font-bold text-sap-deep uppercase tracking-wider mb-3">Industry Focus</h4>
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold text-gray-500 uppercase tracking-wider">Select Industry *</label>
+                    <select required className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-sap-blue/20 transition-all appearance-none">
+                      <option value="">Select Industry</option>
+                      <option>Professional Services (ProServ)</option>
+                      <option>Engineering, Construction & Operations (EC&O)</option>
+                      <option>Both</option>
+                    </select>
+                  </div>
                 </div>
-                <div className="space-y-2">
-                  <label className="text-xs font-bold text-gray-500 uppercase tracking-wider">Company Name</label>
-                  <input type="text" required className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-sap-blue/20 transition-all" />
+
+                {/* Market Coverage */}
+                <div className="pt-2">
+                  <h4 className="text-sm font-bold text-sap-deep uppercase tracking-wider mb-3">Target Market Coverage</h4>
+                  <div className="space-y-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      <div className="space-y-2">
+                        <label className="text-xs font-bold text-gray-500 uppercase tracking-wider">Region</label>
+                        <input type="text" placeholder="e.g., EMEA, APJ" className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-sap-blue/20 transition-all" />
+                      </div>
+                      <div className="space-y-2">
+                        <label className="text-xs font-bold text-gray-500 uppercase tracking-wider">Market Unit (MU)</label>
+                        <input type="text" placeholder="e.g., DACH, North America" className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-sap-blue/20 transition-all" />
+                      </div>
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-xs font-bold text-gray-500 uppercase tracking-wider">Countries</label>
+                      <input type="text" placeholder="e.g., Germany, France, UK" className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-sap-blue/20 transition-all" />
+                    </div>
+                  </div>
                 </div>
-                <div className="space-y-2">
-                  <label className="text-xs font-bold text-gray-500 uppercase tracking-wider">Industry Focus</label>
-                  <select className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-sap-blue/20 transition-all appearance-none">
-                    <option>Professional Services (ProServ)</option>
-                    <option>Engineering, Construction & Operations (EC&O)</option>
-                    <option>Both</option>
-                  </select>
+
+                {/* Capabilities */}
+                <div className="pt-2">
+                  <h4 className="text-sm font-bold text-sap-deep uppercase tracking-wider mb-3">Capabilities</h4>
+                  <div className="space-y-3">
+                    <div className="space-y-2">
+                      <label className="text-xs font-bold text-gray-500 uppercase tracking-wider">Public Cloud Certified Consultants</label>
+                      <input type="text" placeholder="Number or details of certified consultants" className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-sap-blue/20 transition-all" />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-xs font-bold text-gray-500 uppercase tracking-wider">Industry Demo Capabilities</label>
+                      <input type="text" placeholder="Describe your demo capabilities" className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-sap-blue/20 transition-all" />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-xs font-bold text-gray-500 uppercase tracking-wider">Existing Industry Assets (e.g., Industry Solutions)</label>
+                      <textarea rows="2" placeholder="List your industry-specific assets and solutions" className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-sap-blue/20 transition-all resize-none"></textarea>
+                    </div>
+                  </div>
                 </div>
+
+                {/* Additional Information */}
+                <div className="pt-2">
+                  <h4 className="text-sm font-bold text-sap-deep uppercase tracking-wider mb-3">Additional Information</h4>
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold text-gray-500 uppercase tracking-wider">Other Information</label>
+                    <textarea rows="2" placeholder="Any additional information you'd like to share" className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-sap-blue/20 transition-all resize-none"></textarea>
+                  </div>
+                </div>
+
                 <button type="submit" className="w-full sap-button-primary mt-4 flex items-center justify-center gap-2">
                   Submit Registration <ChevronRight className="w-4 h-4" />
                 </button>
               </form>
             )}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12 bg-white border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-8">
-          <div>
-            <h3 className="text-xl font-bold text-sap-deep mb-2">Have questions?</h3>
-            <p className="text-gray-600 text-sm">Our Project Spark leads are here to help you navigate your journey.</p>
-          </div>
-          <div className="flex gap-12">
-            <div className="text-center">
-              <div className="font-bold text-sap-blue">Alex Johnson</div>
-              <div className="text-xs text-gray-500 uppercase tracking-widest mt-1">GTM Strategy Lead</div>
-            </div>
-            <div className="text-center">
-              <div className="font-bold text-sap-blue">Sarah Chen</div>
-              <div className="text-xs text-gray-500 uppercase tracking-widest mt-1">Partner Enablement</div>
-            </div>
           </div>
         </div>
       </section>
